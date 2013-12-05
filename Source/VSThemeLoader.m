@@ -26,8 +26,10 @@
 	if (self == nil)
 		return nil;
 	
-	NSString *themesFilePath = [[NSBundle mainBundle] pathForResource:@"DB5" ofType:@"plist"];
-	NSDictionary *themesDictionary = [NSDictionary dictionaryWithContentsOfFile:themesFilePath];
+	NSString *themesFilePath = [[NSBundle mainBundle] pathForResource:@"DB5" ofType:@"json"];
+    NSError *error = nil;
+	NSDictionary *themesDictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:themesFilePath] options:0 error:&error];
+    assert(error == nil);
 	
 	NSMutableArray *themes = [NSMutableArray array];
 	for (NSString *oneKey in themesDictionary) {

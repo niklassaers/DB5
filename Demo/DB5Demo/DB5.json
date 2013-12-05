@@ -1,0 +1,17 @@
+{
+    "Default": {
+        "backgroundColor": "708090",
+        "labelTextColor": "ececec",
+        "labelFont": "Avenir-Medium",
+        "labelFontSize": "18",
+        "labelX": "44",
+        "labelY": "300",
+        "labelAnimationDuration": "0.25",
+        "labelAnimationDelay": "2",
+        "labelAnimationCurve": "easeout"
+    },
+    
+    "Example Theme": {
+        "test": "foo"
+    }
+}
